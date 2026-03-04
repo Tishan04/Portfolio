@@ -1,9 +1,10 @@
-#Portfolio
+<h1>Portfolio</h1>
 
-About Me
+<h2>Tishan Abeydeera</h2>
+<h4>About Me</h4>
 
 I am a passionate software developer with experience in web development, backend programming, and database systems. I enjoy building practical applications that solve real-world problems while continuously improving my technical and problem-solving skills.
-
+<hr>
 Technical Skills
 
 Frontend: HTML, CSS, JavaScript
@@ -11,7 +12,7 @@ Backend: PHP, C#
 Database: MySQL
 Concepts: Object-Oriented Programming (OOP), Data Structures, Database Design
 Tools: Git, GitHub, Visual Studio, VS Code
-
+<hr>
 PROJECTS
 --Event Management System
 A C# and MySQL-based application that allows administrators and organizers to create, edit, and manage events while participants can register and cancel bookings.
@@ -25,7 +26,7 @@ A web-based application built with PHP and MySQL that securely collects and stor
 
 --Tourist Information Website
 A responsive website designed to provide detailed information about tourist destinations, attractions, and travel guidance. The project focuses on clean UI design, structured content presentation, and user-friendly navigation.
-
+<hr>
 PURPOSE
 This portfolio demonstrates my academic and practical experience in full-stack software development, highlighting my ability to design, develop, and manage database-driven applications.
 
