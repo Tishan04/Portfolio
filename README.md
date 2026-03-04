@@ -1,8 +1,4 @@
-# Portfolio
-This is my personal portfolio website showcasing my software development projects, technical skills, and academic work. It features applications built using HTML, CSS, JavaScript, PHP, C#, and MySQL, demonstrating my knowledge of full-stack development, OOP principles, and database integration.
-
-
-Tishan Abeydeera – Portfolio
+#Tishan Abeydeera – Portfolio
 About Me
 
 I am a passionate software developer with experience in web development, backend programming, and database systems. I enjoy building practical applications that solve real-world problems while continuously improving my technical and problem-solving skills.
