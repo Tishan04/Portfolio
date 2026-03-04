@@ -1,7 +1,6 @@
 <h1>Portfolio</h1>
 
 <h2>Tishan Abeydeera</h2>
-<hr>
 
 <h3>About Me</h3>
 <p>
