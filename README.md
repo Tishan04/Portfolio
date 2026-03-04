@@ -1,5 +1,5 @@
-#Tishan Abeydeera 
-Portfolio 
+#Portfolio
+
 About Me
 
 I am a passionate software developer with experience in web development, backend programming, and database systems. I enjoy building practical applications that solve real-world problems while continuously improving my technical and problem-solving skills.
