@@ -11,15 +11,11 @@ Software Developer Portfolio
 <img src="https://img.shields.io/badge/Concepts-OOP%20%7C%20Data%20Structures-purple">
 </p>
 
-<hr>
-
 <h2>About Me</h2>
 <p>
 I am a passionate software developer with experience in web development, backend programming, and database systems. 
 I enjoy building practical applications that solve real-world problems while continuously improving my technical and problem-solving skills.
 </p>
-
-<hr>
 
 <h2>Technical Skills</h2>
 
@@ -30,8 +26,6 @@ I enjoy building practical applications that solve real-world problems while con
 <li><strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures, Database Design</li>
 <li><strong>Tools:</strong> Git, GitHub, Visual Studio, VS Code</li>
 </ul>
-
-<hr>
 
 <h2>Projects</h2>
 
@@ -59,14 +53,10 @@ A web-based application built with PHP and MySQL that securely collects and stor
 A responsive website designed to provide detailed information about tourist destinations, attractions, and travel guidance. The project focuses on clean interface design, structured content presentation, and user-friendly navigation.
 </p>
 
-<hr>
-
 <h2>Purpose</h2>
 <p>
 This portfolio demonstrates my academic and practical experience in full-stack software development, highlighting my ability to design, develop, and manage database-driven applications.
 </p>
-
-<hr>
 
 <h2>Contact</h2>
 
