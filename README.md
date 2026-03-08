@@ -66,6 +66,6 @@ This portfolio demonstrates my academic and practical experience in full-stack s
 </p>
 
 <p>
-<strong>Email:</strong> 
+<strong>Email: </strong> 
 <a href="mailto:t.d.abeydeera@gmail.com">t.d.abeydeera@gmail.com</a>
 </p>
