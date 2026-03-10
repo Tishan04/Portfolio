@@ -1,4 +1,4 @@
-<h1 align="center">Tishan Abeydeera </h1>
+<h1 align="center">Tishan Abeydeera</h1>
 
 <p align="center">
 Software Developer Portfolio
