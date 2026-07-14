@@ -9,10 +9,7 @@ const currentYear = document.getElementById("currentYear");
 const contactForm = document.getElementById("contactForm");
 const changingRole = document.getElementById("changingRole");
 
-/*
-  Add a background to the navigation header
-  after the user begins scrolling.
-*/
+/* Add a background to the navigation header after the user begins scrolling. */
 function updateHeader() {
   if (window.scrollY > 20) {
     header.classList.add("scrolled");
