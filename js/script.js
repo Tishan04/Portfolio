@@ -169,10 +169,7 @@ backToTop.addEventListener("click", () => {
 */
 currentYear.textContent = new Date().getFullYear();
 
-/*
-  Contact form:
-  Opens the visitor's default email application.
-*/
+/* Contact form: Opens the visitor's default email application. */
 contactForm.addEventListener("submit", (event) => {
   event.preventDefault();
 
