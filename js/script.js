@@ -91,9 +91,7 @@ if ("IntersectionObserver" in window) {
   });
 }
 
-/*
-  Highlight the navigation link for the current section.
-*/
+/* Highlight the navigation link for the current section. */
 const sections = document.querySelectorAll("main section[id]");
 
 const sectionObserver = new IntersectionObserver(
