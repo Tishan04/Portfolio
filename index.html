@@ -1,85 +1,891 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tishan Abeydeera | Portfolio</title>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <meta
+    name="description"
+    content="Portfolio of Tishan Abeydeera, a software developer from Sri Lanka specializing in web development, software systems, databases, and UI/UX design."
+  >
+
+  <title>Tishan Abeydeera | Software Developer</title>
+
   <link rel="stylesheet" href="css/indexstyles.css">
+
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
-  <header>
-    <h1>Tishan.dev</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-  
-  <div class="hero" id="home">
-    <h2>Hi, I'm Tishan Abeydeera</h2>
-    <p>A passionate developer from Sri Lanka building modern websites, software systems, and AI-based solutions.</p>
-    <button class="btn">View My Work</button>
+
+  <!-- Decorative background shapes -->
+  <div class="background-decoration" aria-hidden="true">
+    <div class="blob blob-one"></div>
+    <div class="blob blob-two"></div>
+    <div class="grid-pattern"></div>
   </div>
-  
-  <section id="about">
-    <h3>About Me</h3>
-    <p>
-      I am a software developer and IT student with experience in web development, C#, MySQL systems, and UI design.
-      I enjoy building real-world applications like inventory systems, event management platforms, and modern websites.
-    </p>
-  </section>
-  
-  <section id="skills">
-    <h3>Skills</h3>
-    <div class="skills">
-      <span>HTML</span>
-      <span>CSS</span>
-      <span>JavaScript</span>
-      <span>C</span>
-      <span>C++</span>
-      <span>C#</span>
-      <span>MySQL</span>
-      <span>PHP</span>
-      <span>UI/UX Design</span>
-      <span>Wordpress Website Designing </span>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container navbar">
+
+      <a href="#home" class="logo" aria-label="Tishan.dev homepage">
+        Tishan<span>.dev</span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        type="button"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#contact" class="nav-link nav-contact">Contact</a>
+      </nav>
+
     </div>
-  </section>
+  </header>
 
-  <section id="projects">
-    <h3>Projects</h3>
-    <div class="projects">
-      <div class="card">
-        <h4>Event Management System</h4>
-        <p>Built using C# and MySQL with admin, organizer, and participant roles.</p>
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero section" id="home">
+      <div class="container hero-container">
+
+        <div class="hero-content reveal">
+
+          <p class="eyebrow">
+            <span class="status-dot"></span>
+            Available for exciting opportunities
+          </p>
+
+          <h1>
+            Hi, I’m
+            <span class="gradient-text">Tishan Abeydeera</span>
+          </h1>
+
+          <h2>
+            Software Developer &amp;
+            <span id="changingRole">Web Designer</span>
+          </h2>
+
+          <p class="hero-description">
+            I design and develop modern websites, software systems,
+            database-driven applications, and user-friendly digital
+            experiences that solve real-world problems.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#projects" class="button primary-button">
+              View My Work
+              <span aria-hidden="true">→</span>
+            </a>
+
+            <a
+              href="mailto:t.d.abeydeera@gmail.com"
+              class="button secondary-button"
+            >
+              Contact Me
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a
+              href="https://github.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <span></span>
+
+            <a
+              href="https://www.linkedin.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <span></span>
+
+            <a href="mailto:t.d.abeydeera@gmail.com">
+              Email
+            </a>
+          </div>
+
+        </div>
+
+        <div class="hero-visual reveal">
+
+          <div class="developer-card">
+
+            <div class="developer-card-header">
+              <div class="window-controls">
+                <span class="control-red"></span>
+                <span class="control-yellow"></span>
+                <span class="control-green"></span>
+              </div>
+
+              <p>developer.js</p>
+            </div>
+
+            <div class="code-content">
+              <p>
+                <span class="code-purple">const</span>
+                <span class="code-blue">developer</span>
+                =
+                <span class="code-yellow">{</span>
+              </p>
+
+              <p class="code-indent">
+                name:
+                <span class="code-green">'Tishan Abeydeera'</span>,
+              </p>
+
+              <p class="code-indent">
+                location:
+                <span class="code-green">'Sri Lanka'</span>,
+              </p>
+
+              <p class="code-indent">
+                passion:
+                <span class="code-green">'Creating solutions'</span>,
+              </p>
+
+              <p class="code-indent">
+                skills:
+                <span class="code-yellow">[</span>
+              </p>
+
+              <p class="code-double-indent">
+                <span class="code-green">'Web Development'</span>,
+              </p>
+
+              <p class="code-double-indent">
+                <span class="code-green">'Software Systems'</span>,
+              </p>
+
+              <p class="code-double-indent">
+                <span class="code-green">'UI/UX Design'</span>
+              </p>
+
+              <p class="code-indent">
+                <span class="code-yellow">]</span>,
+              </p>
+
+              <p class="code-indent">
+                available:
+                <span class="code-purple">true</span>
+              </p>
+
+              <p>
+                <span class="code-yellow">}</span>;
+              </p>
+            </div>
+
+            <div class="floating-badge badge-one">
+              <span>💻</span>
+              Web Development
+            </div>
+
+            <div class="floating-badge badge-two">
+              <span>🎨</span>
+              UI/UX Design
+            </div>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="card">
-        <h4>Supermarket Website</h4>
-        <p>E-commerce style website with cart system and product management.</p>
+
+      <a href="#about" class="scroll-indicator" aria-label="Scroll to about section">
+        <span>Scroll down</span>
+        <div class="mouse">
+          <div class="mouse-wheel"></div>
+        </div>
+      </a>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+      <div class="container statistics-grid">
+
+        <article class="stat-card reveal">
+          <h3>10+</h3>
+          <p>Technical Skills</p>
+        </article>
+
+        <article class="stat-card reveal">
+          <h3>4+</h3>
+          <p>Completed Projects</p>
+        </article>
+
+        <article class="stat-card reveal">
+          <h3>100%</h3>
+          <p>Passion for Development</p>
+        </article>
+
+        <article class="stat-card reveal">
+          <h3>24/7</h3>
+          <p>Learning Mindset</p>
+        </article>
+
       </div>
-      <div class="card">
-        <h4>Tuition Website</h4>
-        <p>Modern Elementor-based education platform for Combined Mathematics.</p>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="section-label">Get to know me</p>
+          <h2>About <span>Me</span></h2>
+          <p>
+            A passionate developer focused on building useful,
+            accessible, and visually appealing digital products.
+          </p>
+        </div>
+
+        <div class="about-grid">
+
+          <div class="about-visual reveal">
+            <div class="profile-card">
+
+              <div class="profile-avatar">
+                <span>TA</span>
+              </div>
+
+              <div class="profile-info">
+                <h3>Tishan Abeydeera</h3>
+                <p>Software Developer</p>
+              </div>
+
+              <div class="profile-details">
+                <div>
+                  <span>Location</span>
+                  <strong>Horana, Sri Lanka</strong>
+                </div>
+
+                <div>
+                  <span>Focus</span>
+                  <strong>Web &amp; Software Development</strong>
+                </div>
+
+                <div>
+                  <span>Email</span>
+                  <strong>t.d.abeydeera@gmail.com</strong>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="about-content reveal">
+            <h3>
+              Creating digital experiences that are both
+              <span>functional and memorable.</span>
+            </h3>
+
+            <p>
+              I am a software developer and IT student with experience
+              in web development, C#, PHP, MySQL systems, WordPress,
+              Elementor, and user interface design.
+            </p>
+
+            <p>
+              I enjoy turning ideas into practical applications. My
+              projects include inventory systems, event management
+              platforms, e-commerce websites, education websites, and
+              database-driven software solutions.
+            </p>
+
+            <p>
+              My goal is to continuously improve my technical knowledge
+              while developing solutions that provide a smooth and
+              meaningful experience for users.
+            </p>
+
+            <div class="about-highlights">
+
+              <div class="highlight-item">
+                <span>✓</span>
+                <div>
+                  <h4>Problem Solver</h4>
+                  <p>Focused on practical and efficient solutions.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <span>✓</span>
+                <div>
+                  <h4>Creative Thinker</h4>
+                  <p>Combining functionality with attractive design.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <span>✓</span>
+                <div>
+                  <h4>Continuous Learner</h4>
+                  <p>Always exploring new tools and technologies.</p>
+                </div>
+              </div>
+
+              <div class="highlight-item">
+                <span>✓</span>
+                <div>
+                  <h4>Team Player</h4>
+                  <p>Comfortable collaborating on shared goals.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <a
+              href="mailto:t.d.abeydeera@gmail.com"
+              class="text-link"
+            >
+              Let’s work together
+              <span aria-hidden="true">→</span>
+            </a>
+
+          </div>
+
+        </div>
+
       </div>
-      <div class="card">
-        <h4>Combined Mathematics Teacher Portfolio</h4>
-        <p>Modern Elementor-based information website for a leading Combined Mathematics Teacher.</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section alternate-section" id="skills">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="section-label">My technical toolkit</p>
+          <h2>Skills &amp; <span>Technologies</span></h2>
+          <p>
+            Technologies and tools I use to design, develop, and manage
+            modern digital solutions.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+
+          <article class="skill-category reveal">
+            <div class="skill-icon">01</div>
+            <h3>Frontend Development</h3>
+            <p>
+              Creating responsive, accessible, and visually engaging
+              website interfaces.
+            </p>
+
+            <div class="skill-tags">
+              <span>HTML5</span>
+              <span>CSS3</span>
+              <span>JavaScript</span>
+              <span>Responsive Design</span>
+            </div>
+          </article>
+
+          <article class="skill-category reveal">
+            <div class="skill-icon">02</div>
+            <h3>Backend Development</h3>
+            <p>
+              Developing application logic and connecting interfaces
+              with databases.
+            </p>
+
+            <div class="skill-tags">
+              <span>PHP</span>
+              <span>C#</span>
+              <span>MySQL</span>
+              <span>Database Design</span>
+            </div>
+          </article>
+
+          <article class="skill-category reveal">
+            <div class="skill-icon">03</div>
+            <h3>Programming</h3>
+            <p>
+              Applying programming concepts to build reliable software
+              and solve problems.
+            </p>
+
+            <div class="skill-tags">
+              <span>C</span>
+              <span>C++</span>
+              <span>C#</span>
+              <span>OOP</span>
+            </div>
+          </article>
+
+          <article class="skill-category reveal">
+            <div class="skill-icon">04</div>
+            <h3>Design &amp; CMS</h3>
+            <p>
+              Designing user-friendly layouts and managing content-based
+              websites.
+            </p>
+
+            <div class="skill-tags">
+              <span>UI/UX Design</span>
+              <span>Figma</span>
+              <span>WordPress</span>
+              <span>Elementor</span>
+            </div>
+          </article>
+
+        </div>
+
       </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="section-label">What I can do</p>
+          <h2>My <span>Services</span></h2>
+          <p>
+            Digital solutions designed according to the goals,
+            requirements, and target audience of each project.
+          </p>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <div class="service-number">01</div>
+            <div class="service-symbol">&lt;/&gt;</div>
+            <h3>Website Development</h3>
+            <p>
+              Responsive and modern websites developed using HTML, CSS,
+              JavaScript, PHP, and MySQL.
+            </p>
+            <a href="#contact">Discuss a project →</a>
+          </article>
+
+          <article class="service-card featured-service reveal">
+            <div class="service-number">02</div>
+            <div class="service-symbol">▣</div>
+            <h3>Software Systems</h3>
+            <p>
+              Database-driven software systems for managing users,
+              products, events, inventory, and business operations.
+            </p>
+            <a href="#contact">Discuss a project →</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">03</div>
+            <div class="service-symbol">✦</div>
+            <h3>UI/UX Design</h3>
+            <p>
+              Clean and intuitive interfaces that improve usability,
+              accessibility, and the overall user experience.
+            </p>
+            <a href="#contact">Discuss a project →</a>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-number">04</div>
+            <div class="service-symbol">W</div>
+            <h3>WordPress Design</h3>
+            <p>
+              Professional WordPress and Elementor websites for
+              businesses, educators, and personal brands.
+            </p>
+            <a href="#contact">Discuss a project →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section alternate-section" id="projects">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="section-label">Selected work</p>
+          <h2>Featured <span>Projects</span></h2>
+          <p>
+            A selection of applications and websites created using
+            different technologies.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <article class="project-card reveal">
+
+            <div class="project-preview event-preview">
+              <div class="preview-content">
+                <span>Event Management</span>
+                <strong>EVENTLY</strong>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header">
+                <p>Software System</p>
+                <span>01</span>
+              </div>
+
+              <h3>Event Management System</h3>
+
+              <p>
+                A role-based system developed for administrators,
+                organizers, and participants to manage events,
+                registrations, and user information.
+              </p>
+
+              <div class="project-tags">
+                <span>C#</span>
+                <span>MySQL</span>
+                <span>OOP</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">View project</a>
+                <a href="#">Source code</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview supermarket-preview">
+              <div class="preview-content">
+                <span>Online Shopping</span>
+                <strong>FRESHMART</strong>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header">
+                <p>E-commerce Website</p>
+                <span>02</span>
+              </div>
+
+              <h3>Supermarket Website</h3>
+
+              <p>
+                An e-commerce-style supermarket website featuring
+                product categories, shopping cart functionality, and
+                product management.
+              </p>
+
+              <div class="project-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>PHP</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">View project</a>
+                <a href="#">Source code</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview tuition-preview">
+              <div class="preview-content">
+                <span>Education Platform</span>
+                <strong>MATHSPACE</strong>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header">
+                <p>WordPress Website</p>
+                <span>03</span>
+              </div>
+
+              <h3>Tuition Website</h3>
+
+              <p>
+                A modern education platform for Combined Mathematics
+                students, featuring class information, schedules, and
+                educational resources.
+              </p>
+
+              <div class="project-tags">
+                <span>WordPress</span>
+                <span>Elementor</span>
+                <span>UI/UX</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">View project</a>
+                <a href="#">Case study</a>
+              </div>
+            </div>
+
+          </article>
+
+          <article class="project-card reveal">
+
+            <div class="project-preview portfolio-preview">
+              <div class="preview-content">
+                <span>Personal Branding</span>
+                <strong>EDUCATOR</strong>
+              </div>
+            </div>
+
+            <div class="project-content">
+              <div class="project-header">
+                <p>Portfolio Website</p>
+                <span>04</span>
+              </div>
+
+              <h3>Teacher Portfolio Website</h3>
+
+              <p>
+                An informative and professional portfolio website
+                designed for a leading Combined Mathematics teacher.
+              </p>
+
+              <div class="project-tags">
+                <span>WordPress</span>
+                <span>Elementor</span>
+                <span>Responsive Design</span>
+              </div>
+
+              <div class="project-links">
+                <a href="#">View project</a>
+                <a href="#">Case study</a>
+              </div>
+            </div>
+
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Work Process -->
+    <section class="section">
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <p class="section-label">How I work</p>
+          <h2>Development <span>Process</span></h2>
+          <p>
+            A structured approach that keeps each project focused,
+            organized, and user-centred.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <article class="process-card reveal">
+            <span>01</span>
+            <h3>Discover</h3>
+            <p>
+              Understand the problem, users, goals, and project
+              requirements.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>02</span>
+            <h3>Plan</h3>
+            <p>
+              Create the structure, database design, user flow, and
+              technical plan.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>03</span>
+            <h3>Develop</h3>
+            <p>
+              Build the interface, application logic, and database
+              functionality.
+            </p>
+          </article>
+
+          <article class="process-card reveal">
+            <span>04</span>
+            <h3>Test &amp; Improve</h3>
+            <p>
+              Test the solution, resolve issues, and improve the final
+              user experience.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container contact-container">
+
+        <div class="contact-introduction reveal">
+          <p class="section-label">Start a conversation</p>
+
+          <h2>
+            Have a project in mind?
+            <span>Let’s build it together.</span>
+          </h2>
+
+          <p>
+            I am interested in software development opportunities,
+            website projects, collaborations, internships, and other
+            exciting technology-related work.
+          </p>
+
+          <div class="contact-details">
+
+            <a href="mailto:t.d.abeydeera@gmail.com" class="contact-item">
+              <span class="contact-item-icon">@</span>
+
+              <div>
+                <small>Email</small>
+                <strong>t.d.abeydeera@gmail.com</strong>
+              </div>
+            </a>
+
+            <div class="contact-item">
+              <span class="contact-item-icon">⌖</span>
+
+              <div>
+                <small>Location</small>
+                <strong>Horana, Sri Lanka</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <form class="contact-form reveal" id="contactForm">
+
+          <div class="form-group">
+            <label for="name">Your name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Enter your name"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Enter your email address"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <input
+              type="text"
+              id="subject"
+              name="subject"
+              placeholder="What would you like to discuss?"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="6"
+              placeholder="Tell me about your project or opportunity"
+              required
+            ></textarea>
+          </div>
+
+          <button type="submit" class="button primary-button form-button">
+            Send Message
+            <span aria-hidden="true">→</span>
+          </button>
+
+          <p class="form-note">
+            This button will open your default email application.
+          </p>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+
+      <div>
+        <a href="#home" class="logo">
+          Tishan<span>.dev</span>
+        </a>
+
+        <p>
+          Designing and developing meaningful digital experiences.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="copyright">
+        © <span id="currentYear"></span> Tishan Abeydeera.
+        All Rights Reserved.
+      </p>
+
     </div>
-  </section>
-
-  <section id="contact">
-    <h3>Contact</h3>
-    <p>Email: t.d.abeydeera@gmail.com</p>
-    <p>Location: Horana | Sri Lanka</p>
-  </section>
-
-  <footer>
-    <p>© 2026 Tishan Abeydeera. All Rights Reserved.</p>
   </footer>
+
+  <button
+    class="back-to-top"
+    id="backToTop"
+    type="button"
+    aria-label="Return to the top of the page"
+  >
+    ↑
+  </button>
 
 </body>
 </html>
