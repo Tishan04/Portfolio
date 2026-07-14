@@ -121,9 +121,7 @@ sections.forEach((section) => {
   sectionObserver.observe(section);
 });
 
-/*
-  Rotating role text in the hero section.
-*/
+/* Rotating role text in the hero section. */
 const roles = [
   "Web Designer",
   "Software Developer",
