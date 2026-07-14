@@ -62,9 +62,7 @@ document.addEventListener("click", (event) => {
   }
 });
 
-/*
-  Reveal elements when they enter the screen.
-*/
+/* Reveal elements when they enter the screen. */
 const revealElements = document.querySelectorAll(".reveal");
 
 if ("IntersectionObserver" in window) {
