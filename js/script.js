@@ -27,9 +27,7 @@ function updateHeader() {
 window.addEventListener("scroll", updateHeader);
 updateHeader();
 
-/*
-  Mobile navigation menu
-*/
+/* Mobile navigation menu */
 menuToggle.addEventListener("click", () => {
   const isOpen = navigation.classList.toggle("open");
 
@@ -47,9 +45,7 @@ navLinks.forEach((link) => {
   });
 });
 
-/*
-  Close the mobile menu when clicking outside it.
-*/
+/* Close the mobile menu when clicking outside it. */
 document.addEventListener("click", (event) => {
   const clickedInsideNavigation = navigation.contains(event.target);
   const clickedMenuButton = menuToggle.contains(event.target);
