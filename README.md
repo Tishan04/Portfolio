@@ -31,6 +31,9 @@ I enjoy building practical applications that solve real-world problems while con
 <h2>Outsource Projects</h2>
 
 <h3>Class Website</h3>
+<p>
+  
+</p>
 
 <h2>Personal Projects</h2>
 
@@ -41,41 +44,45 @@ I enjoy building practical applications that solve real-world problems while con
 
 <h3>Event Management System</h3>
 <p>
-A C# and MySQL-based application that allows administrators and organizers to create, edit, and manage events while participants can register and cancel bookings.
+  A C# and MySQL-based application that allows administrators and organizers to create, edit, and manage events while participants can    register and cancel bookings.
 </p>
 
 <p>
-<strong>Key Concepts:</strong> Object-Oriented Programming, CRUD operations, database integration, and role-based functionality.
+  <strong>Key Concepts:</strong> Object-Oriented Programming, CRUD operations, database integration, and role-based functionality.
 </p>
 
 <h3>Supermarket Website</h3>
 <p>
-A dynamic shopping cart system developed using HTML, CSS, and JavaScript. The project includes interactive product selection, quantity updates, and cart management features.
+  A dynamic shopping cart system developed using HTML, CSS, and JavaScript. The project includes interactive product selection,
+  quantity updates, and cart management features.
 </p>
 
 <h3>Student Registration System</h3>
 <p>
-A web-based application built with PHP and MySQL that securely collects and stores student information using prepared statements and structured database handling techniques.
+  A web-based application built with PHP and MySQL that securely collects and stores student information using prepared statements and 
+  structured database handling techniques.
 </p>
 
 <h3>Tourist Information Website</h3>
 <p>
-A responsive website designed to provide detailed information about tourist destinations, attractions, and travel guidance. The project focuses on clean interface design, structured content presentation, and user-friendly navigation.
+  A responsive website designed to provide detailed information about tourist destinations, attractions, and travel guidance. The 
+  project focuses on clean interface design, structured content presentation, and user-friendly navigation.
 </p>
 
 <h2>Purpose</h2>
 <p>
-This portfolio demonstrates my academic and practical experience in full-stack software development, highlighting my ability to design, develop, and manage database-driven applications.
+  This portfolio demonstrates my academic and practical experience in full-stack software development, highlighting my ability to 
+  design, develop, and manage database-driven applications.
 </p>
 
 <h2>Contact</h2>
 
 <p>
-<strong>GitHub:</strong> 
-<a href="https://github.com/Tishan04">https://github.com/Tishan04</a>
+  <strong>GitHub:</strong> 
+  <a href="https://github.com/Tishan04">https://github.com/Tishan04</a>
 </p>
 
 <p>
-<strong>Email: </strong> 
-<a href="mailto:t.d.abeydeera@gmail.com">t.d.abeydeera@gmail.com</a>
+  <strong>Email: </strong> 
+  <a href="mailto:t.d.abeydeera@gmail.com">t.d.abeydeera@gmail.com</a>
 </p>
