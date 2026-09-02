@@ -25,10 +25,10 @@ I enjoy building practical applications that solve real-world problems while con
 <li><strong>Database:</strong> MySQL</li>
 <li><strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures, Database Design, Software Architecture</li>
 <li><strong>Languages:</strong> Python, C, C++ </li>
-<li><strong>Tools:</strong> Git, GitHub, Visual Studio, VS Code</li>
+<li><strong>Tools:</strong> Git, GitHub, Visual Studio, VS Code, </li>
 </ul>
 
-<h2>Projects</h2>
+<h2>Personal Projects</h2>
 
 <h3>Event Management System</h3>
 <p>
