@@ -28,7 +28,14 @@ I enjoy building practical applications that solve real-world problems while con
 <li><strong>Tools:</strong> Git, GitHub, Visual Studio, VS Code, Wordpress</li>
 </ul>
 
+<h2>Outsource Projects</h2>
+
+
 <h2>Personal Projects</h2>
+
+<h3>Disaster and Crisis Management System</h3>
+
+<p>Being Created...</p>
 
 <h3>Event Management System</h3>
 <p>
