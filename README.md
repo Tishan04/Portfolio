@@ -23,7 +23,7 @@ I enjoy building practical applications that solve real-world problems while con
 <li><strong>Frontend:</strong> HTML, CSS, JavaScript</li>
 <li><strong>Backend:</strong> PHP, C#</li>
 <li><strong>Database:</strong> MySQL</li>
-<li><strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures, Database Design</li>
+<li><strong>Concepts:</strong> Object-Oriented Programming (OOP), Data Structures, Database Design, Software Architecture</li>
 <li><strong>Languages:</strong> Python, C, C++ </li>
 <li><strong>Tools:</strong> Git, GitHub, Visual Studio, VS Code</li>
 </ul>
