@@ -1,21 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>What to Expect!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Technical skills and development toolkit of Tishan Abeydeera, including frontend, backend, databases, programming languages, and development tools.">
+  <meta name="theme-color" content="#070b17">
+  <title>Skills | Tishan Abeydeera</title>
   <link rel="stylesheet" href="css/indexstyles.css">
-  <link rel="stylesheet" href="css/skillstyles.css">
+  <link rel="stylesheet" href="css/pagestyles.css">
+  <script src="js/script.js" defer></script>
 </head>
-
 <body>
-  <header>
-    <h1>Tishan.dev</h1>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="background-decoration" aria-hidden="true"><div class="orb orb-one"></div><div class="orb orb-two"></div><div class="grid-pattern"></div></div>
+
+  <header class="header" id="header"><div class="container navbar"><a href="index.html" class="logo" aria-label="Tishan.dev home">Tishan<span>.dev</span></a><div class="nav-actions"><button class="theme-toggle" id="themeToggle" type="button" aria-label="Switch colour theme" title="Switch theme"><span class="theme-icon" aria-hidden="true">◐</span></button><button class="menu-toggle" id="menuToggle" type="button" aria-label="Open navigation menu" aria-expanded="false" aria-controls="navigation"><span></span><span></span><span></span></button></div><nav class="navigation" id="navigation" aria-label="Primary navigation"><a href="index.html" class="nav-link">Home</a><a href="about.html" class="nav-link">About</a><a href="skills.html" class="nav-link active" aria-current="page">Skills</a><a href="projects.html" class="nav-link">Projects</a><a href="contact.html" class="nav-link nav-contact">Contact</a></nav></div></header>
+
+  <main class="page-main" id="main">
+    <section class="page-hero"><div class="container page-hero-grid"><div class="reveal"><p class="page-kicker">Technical toolkit</p><h1>Skills that help me <span>build.</span></h1><p class="page-hero-copy">A practical collection of technologies, programming concepts, and tools I use across web development, software applications, and database-driven projects.</p><div class="page-hero-actions"><a class="button primary-button" href="projects.html">See skills in projects <span aria-hidden="true">→</span></a><a class="button secondary-button" href="https://github.com/Tishan04" target="_blank" rel="noopener noreferrer">View GitHub ↗</a></div></div><div class="page-number" aria-hidden="true">02</div></div></section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="page-section-heading reveal"><p class="section-label">Core skills</p><div><h2>From interface to <span>application logic.</span></h2><p>Each card is a self-contained template. To add a new category later, copy one <code>&lt;article class="skill-library-card"&gt;</code> block and change the text and tags.</p></div></div>
+        <div class="skill-library">
+          <!-- COPY THIS CARD to add a future skill category. -->
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Frontend Development</h3><p>Building responsive, structured, and interactive interfaces for the web.</p></div><span class="skill-library-icon">FE</span></div><div class="skill-tags"><span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Responsive Design</span></div></article>
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Backend &amp; Databases</h3><p>Connecting application logic to structured data and reliable CRUD workflows.</p></div><span class="skill-library-icon">BE</span></div><div class="skill-tags"><span>PHP</span><span>C#</span><span>MySQL</span><span>CRUD</span><span>Database Design</span></div></article>
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Programming Languages</h3><p>General-purpose programming experience used for problem solving and application development.</p></div><span class="skill-library-icon">PL</span></div><div class="skill-tags"><span>Python</span><span>C</span><span>C++</span><span>C#</span></div></article>
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Computer Science Concepts</h3><p>Foundational concepts that support better software structure and implementation choices.</p></div><span class="skill-library-icon">CS</span></div><div class="skill-tags"><span>OOP</span><span>Data Structures</span><span>Software Architecture</span><span>Project Management</span></div></article>
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Development Tools</h3><p>Tools used to write, organise, version, test, and maintain development work.</p></div><span class="skill-library-icon">DX</span></div><div class="skill-tags"><span>Git</span><span>GitHub</span><span>VS Code</span><span>Visual Studio</span></div></article>
+          <article class="skill-library-card reveal"><div class="skill-library-top"><div><h3>Web Platforms &amp; Design</h3><p>Supporting tools for content-managed sites, visual planning, and faster implementation.</p></div><span class="skill-library-icon">UI</span></div><div class="skill-tags"><span>WordPress</span><span>Figma</span><span>UI Structure</span><span>Content Design</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section alternate-section">
+      <div class="container">
+        <div class="page-section-heading reveal"><p class="section-label">How I use them</p><div><h2>Skills matter most when they work <span>together.</span></h2><p>Rather than treating technologies as isolated badges, I use them as parts of a workflow from problem definition to finished implementation.</p></div></div>
+        <div class="card-grid">
+          <article class="info-card reveal"><span class="info-card-number">01</span><h3>Plan the structure</h3><p>Break requirements into users, data, screens, components, and application responsibilities before implementation.</p><div class="skill-tags"><span>Architecture</span><span>Database Design</span><span>OOP</span></div></article>
+          <article class="info-card reveal"><span class="info-card-number">02</span><h3>Build the system</h3><p>Implement responsive interfaces, application logic, form handling, data persistence, and role-based workflows.</p><div class="skill-tags"><span>HTML/CSS/JS</span><span>PHP/C#</span><span>MySQL</span></div></article>
+          <article class="info-card reveal"><span class="info-card-number">03</span><h3>Refine the result</h3><p>Use version control, testing, debugging, and interface refinement to improve reliability and usability.</p><div class="skill-tags"><span>Git</span><span>GitHub</span><span>Debugging</span><span>UI</span></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="page-section">
+      <div class="container">
+        <div class="template-banner reveal"><div><h3>Built to be updated later</h3><p>When you learn a new framework or tool, duplicate a skill card above and add it to the right category. I intentionally avoided made-up percentage bars, so the page stays credible as your toolkit grows.</p></div><span class="template-code">skills.html</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-content"><div class="footer-brand"><a href="index.html" class="logo">Tishan<span>.dev</span></a><p>Building thoughtful digital experiences from Sri Lanka.</p></div><div class="footer-links"><a href="about.html">About</a><a href="skills.html">Skills</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></div><p class="copyright">© <span id="currentYear"></span> Tishan Abeydeera</p></div></footer>
+  <button class="back-to-top" id="backToTop" type="button" aria-label="Return to the top of the page">↑</button>
+</body>
+</html>
