@@ -1,189 +1,141 @@
 "use strict";
 
-const header = document.querySelector(".header");
+const header = document.getElementById("header");
 const menuToggle = document.getElementById("menuToggle");
 const navigation = document.getElementById("navigation");
-const navLinks = document.querySelectorAll(".nav-link");
+const navLinks = [...document.querySelectorAll(".nav-link")];
 const backToTop = document.getElementById("backToTop");
 const currentYear = document.getElementById("currentYear");
 const contactForm = document.getElementById("contactForm");
+const formError = document.getElementById("formError");
 const changingRole = document.getElementById("changingRole");
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle?.querySelector(".theme-icon");
 
-/* Add a background to the navigation header after the user begins scrolling. */
-function updateHeader() {
-  if (window.scrollY > 20) {
-    header.classList.add("scrolled");
-  } else {
-    header.classList.remove("scrolled");
-  }
-
-  if (window.scrollY > 500) {
-    backToTop.classList.add("visible");
-  } else {
-    backToTop.classList.remove("visible");
-  }
+function closeMenu() {
+  if (!navigation || !menuToggle) return;
+  navigation.classList.remove("open");
+  menuToggle.classList.remove("active");
+  menuToggle.setAttribute("aria-expanded", "false");
+  menuToggle.setAttribute("aria-label", "Open navigation menu");
+  document.body.classList.remove("menu-open");
 }
 
-window.addEventListener("scroll", updateHeader);
+function updateHeader() {
+  header?.classList.toggle("scrolled", window.scrollY > 18);
+  backToTop?.classList.toggle("visible", window.scrollY > 520);
+}
+
+window.addEventListener("scroll", updateHeader, { passive: true });
 updateHeader();
 
-/* Mobile navigation menu */
-menuToggle.addEventListener("click", () => {
-  const isOpen = navigation.classList.toggle("open");
-
+menuToggle?.addEventListener("click", () => {
+  const isOpen = navigation?.classList.toggle("open") ?? false;
   menuToggle.classList.toggle("active", isOpen);
   menuToggle.setAttribute("aria-expanded", String(isOpen));
+  menuToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu");
   document.body.classList.toggle("menu-open", isOpen);
 });
 
-navLinks.forEach((link) => {
-  link.addEventListener("click", () => {
-    navigation.classList.remove("open");
-    menuToggle.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
-  });
-});
+navLinks.forEach((link) => link.addEventListener("click", closeMenu));
 
-/* Close the mobile menu when clicking outside it. */
 document.addEventListener("click", (event) => {
-  const clickedInsideNavigation = navigation.contains(event.target);
-  const clickedMenuButton = menuToggle.contains(event.target);
-
-  if (
-    navigation.classList.contains("open") &&
-    !clickedInsideNavigation &&
-    !clickedMenuButton
-  ) {
-    navigation.classList.remove("open");
-    menuToggle.classList.remove("active");
-    menuToggle.setAttribute("aria-expanded", "false");
-    document.body.classList.remove("menu-open");
-  }
+  if (!navigation?.classList.contains("open") || !menuToggle) return;
+  if (!navigation.contains(event.target) && !menuToggle.contains(event.target)) closeMenu();
 });
 
-/* Reveal elements when they enter the screen. */
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") closeMenu();
+});
+
 const revealElements = document.querySelectorAll(".reveal");
-
 if ("IntersectionObserver" in window) {
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0.12
-    }
-  );
-
-  revealElements.forEach((element) => {
-    revealObserver.observe(element);
-  });
-} else {
-  revealElements.forEach((element) => {
-    element.classList.add("visible");
-  });
-}
-
-/* Highlight the navigation link for the current section. */
-const sections = document.querySelectorAll("main section[id]");
-
-const sectionObserver = new IntersectionObserver(
-  (entries) => {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach((entry) => {
-      if (!entry.isIntersecting) {
-        return;
-      }
-
-      navLinks.forEach((link) => {
-        link.classList.remove("active");
-      });
-
-      const currentLink = document.querySelector(
-        `.nav-link[href="#${entry.target.id}"]`
-      );
-
-      if (currentLink) {
-        currentLink.classList.add("active");
-      }
+      if (!entry.isIntersecting) return;
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     });
-  },
-  {
-    rootMargin: "-40% 0px -50% 0px"
-  }
-);
-
-sections.forEach((section) => {
-  sectionObserver.observe(section);
-});
-
-/* Rotating role text in the hero section. */
-const roles = [
-  "Web Designer",
-  "Software Developer",
-  "UI/UX Enthusiast",
-  "Problem Solver"
-];
-
-let roleIndex = 0;
-
-function changeRole() {
-  changingRole.style.opacity = "0";
-  changingRole.style.transform = "translateY(6px)";
-
-  window.setTimeout(() => {
-    roleIndex = (roleIndex + 1) % roles.length;
-    changingRole.textContent = roles[roleIndex];
-    changingRole.style.opacity = "1";
-    changingRole.style.transform = "translateY(0)";
-  }, 250);
+  }, { threshold: 0.11, rootMargin: "0px 0px -25px" });
+  revealElements.forEach((element) => revealObserver.observe(element));
+} else {
+  revealElements.forEach((element) => element.classList.add("visible"));
 }
 
-changingRole.style.display = "inline-block";
-changingRole.style.transition = "opacity 0.25s ease, transform 0.25s ease";
+const sections = document.querySelectorAll("main section[id]");
+const hashNavLinks = navLinks.filter((link) => link.getAttribute("href")?.startsWith("#"));
+if ("IntersectionObserver" in window && hashNavLinks.length) {
+  const sectionObserver = new IntersectionObserver((entries) => {
+    const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+    if (!visible) return;
+    hashNavLinks.forEach((link) => link.classList.toggle("active", link.getAttribute("href") === `#${visible.target.id}`));
+  }, { rootMargin: "-34% 0px -55% 0px", threshold: [0.01, 0.2, 0.5] });
+  sections.forEach((section) => sectionObserver.observe(section));
+}
 
-window.setInterval(changeRole, 2500);
+const roles = ["Software Developer", "Web Developer", "Problem Solver", "Database Builder"];
+let roleIndex = 0;
+if (changingRole && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+  window.setInterval(() => {
+    changingRole.style.opacity = "0";
+    changingRole.style.transform = "translateY(5px)";
+    window.setTimeout(() => {
+      roleIndex = (roleIndex + 1) % roles.length;
+      changingRole.textContent = roles[roleIndex];
+      changingRole.style.opacity = "1";
+      changingRole.style.transform = "translateY(0)";
+    }, 190);
+  }, 2700);
+}
 
-/*
-  Return to the top of the page.
-*/
-backToTop.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+backToTop?.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+if (currentYear) currentYear.textContent = String(new Date().getFullYear());
+
+function applyTheme(theme) {
+  const resolvedTheme = theme === "light" ? "light" : "dark";
+  document.documentElement.dataset.theme = resolvedTheme;
+  if (themeIcon) themeIcon.textContent = resolvedTheme === "dark" ? "◐" : "◑";
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", resolvedTheme === "dark" ? "#070b17" : "#f5f7fb");
+}
+
+let savedTheme = null;
+try { savedTheme = localStorage.getItem("portfolio-theme"); } catch (_) {}
+const preferredTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+applyTheme(savedTheme || preferredTheme);
+
+themeToggle?.addEventListener("click", () => {
+  const nextTheme = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+  applyTheme(nextTheme);
+  try { localStorage.setItem("portfolio-theme", nextTheme); } catch (_) {}
 });
 
-/*
-  Update the copyright year automatically.
-*/
-currentYear.textContent = new Date().getFullYear();
-
-/* Contact form: Opens the visitor's default email application. */
-contactForm.addEventListener("submit", (event) => {
+contactForm?.addEventListener("submit", (event) => {
   event.preventDefault();
+  const fields = ["name", "email", "subject", "message"].map((id) => document.getElementById(id));
+  fields.forEach((field) => field?.classList.remove("invalid"));
 
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const subject = document.getElementById("subject").value.trim();
-  const message = document.getElementById("message").value.trim();
+  const [nameField, emailField, subjectField, messageField] = fields;
+  const name = nameField?.value.trim() || "";
+  const email = emailField?.value.trim() || "";
+  const subject = subjectField?.value.trim() || "";
+  const message = messageField?.value.trim() || "";
+  const emailIsValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
-  if (!name || !email || !subject || !message) {
-    alert("Please complete all fields before sending your message.");
+  const invalidFields = [];
+  if (!name) invalidFields.push(nameField);
+  if (!email || !emailIsValid) invalidFields.push(emailField);
+  if (!subject) invalidFields.push(subjectField);
+  if (!message) invalidFields.push(messageField);
+
+  invalidFields.forEach((field) => field?.classList.add("invalid"));
+  if (invalidFields.length) {
+    if (formError) formError.textContent = "Please complete every field and enter a valid email address.";
+    invalidFields[0]?.focus();
     return;
   }
 
+  if (formError) formError.textContent = "";
   const emailSubject = encodeURIComponent(subject);
-
-  const emailBody = encodeURIComponent(
-    `Hello Tishan,\n\n${message}\n\nName: ${name}\nEmail: ${email}`
-  );
-
-  window.location.href =
-    `mailto:t.d.abeydeera@gmail.com` +
-    `?subject=${emailSubject}&body=${emailBody}`;
+  const emailBody = encodeURIComponent(`Hello Tishan,\n\n${message}\n\nRegards,\n${name}\n${email}`);
+  window.location.href = `mailto:t.d.abeydeera@gmail.com?subject=${emailSubject}&body=${emailBody}`;
 });
