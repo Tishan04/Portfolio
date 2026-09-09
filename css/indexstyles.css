@@ -72,7 +72,10 @@ button {
   cursor: pointer; 
 }
 
-::selection { color: white; background: var(--primary-strong); }
+::selection { 
+  color: white; 
+  background: var(--primary-strong); 
+}
 
 :focus-visible { 
   outline: 2px solid var(--secondary); 
@@ -115,12 +118,38 @@ input:focus-visible, textarea:focus-visible {
   background: rgba(255, 255, 255, 0.012); 
 }
 
-html[data-theme="light"] .alternate-section { background: rgba(255,255,255,.34); }
+html[data-theme="light"] .alternate-section { 
+  background: rgba(255,255,255,.34); 
+}
 
-.background-decoration { position: fixed; inset: 0; z-index: -1; overflow: hidden; pointer-events: none; }
-.orb { position: absolute; width: 430px; height: 430px; border-radius: 999px; opacity: .16; filter: blur(105px); }
-.orb-one { top: -210px; left: -160px; background: var(--primary); }
-.orb-two { top: 42%; right: -240px; background: var(--secondary); }
+.background-decoration { 
+  position: fixed; inset: 0; 
+  z-index: -1; 
+  overflow: hidden; 
+  pointer-events: none; 
+}
+
+.orb { 
+  position: absolute; 
+  width: 430px; 
+  height: 430px; 
+  border-radius: 999px; 
+  opacity: .16; 
+  filter: blur(105px); 
+}
+
+.orb-one { 
+  top: -210px; 
+  left: -160px;
+  background: var(--primary); 
+}
+
+.orb-two { 
+  top: 42%; 
+  right: -240px; 
+  background: var(--secondary); 
+}
+
 .grid-pattern { position: absolute; inset: 0; opacity: .022; background-image: linear-gradient(rgba(255,255,255,.8) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.8) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, black, transparent 82%); }
 html[data-theme="light"] .grid-pattern { opacity: .045; background-image: linear-gradient(rgba(32,44,70,.5) 1px, transparent 1px), linear-gradient(90deg, rgba(32,44,70,.5) 1px, transparent 1px); }
 
