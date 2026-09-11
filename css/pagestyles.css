@@ -58,9 +58,18 @@
 .page-hero h1 { 
    max-width: 860px;
    margin-bottom: 20px; 
-   font-size: clamp(3.25rem, 7vw, 6.25rem); line-height: .98; letter-spacing: -.065em; }
+   font-size: clamp(3.25rem, 7vw, 6.25rem); 
+   line-height: .98;
+   letter-spacing: -.065em;
+}
+
 .page-hero h1 span { color: var(--primary); }
-.page-hero-copy { max-width: 760px; color: var(--muted); font-size: 1rem; }
+
+.page-hero-copy {
+   max-width: 760px; 
+   color: var(--muted);
+   font-size: 1rem; 
+}
 .page-hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 29px; }
 .page-number { align-self: center; color: color-mix(in srgb, var(--primary) 28%, transparent); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: clamp(6rem, 14vw, 11rem); font-weight: 900; line-height: .8; letter-spacing: -.09em; user-select: none; }
 
