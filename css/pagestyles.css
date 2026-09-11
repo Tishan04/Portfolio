@@ -2,13 +2,63 @@
    Shared homepage styling lives in indexstyles.css.
    Edit this file when you want to change the inner pages without touching the homepage. */
 
-.page-main { padding-top: var(--header-height); }
-.page-hero { position: relative; padding: 112px 0 78px; border-bottom: 1px solid var(--border); overflow: hidden; }
-.page-hero::after { position: absolute; top: 18%; right: -8%; width: 360px; height: 360px; border: 1px solid var(--border); border-radius: 50%; opacity: .35; content: ""; box-shadow: 0 0 0 58px rgba(139,92,246,.025), 0 0 0 116px rgba(34,211,238,.018); pointer-events: none; }
-.page-hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: minmax(0,1fr) auto; align-items: end; gap: 54px; }
-.page-kicker { display: inline-flex; align-items: center; gap: 9px; margin-bottom: 18px; color: var(--primary); font-size: .69rem; font-weight: 900; letter-spacing: .17em; text-transform: uppercase; }
-.page-kicker::before { width: 28px; height: 1px; background: var(--primary); content: ""; }
-.page-hero h1 { max-width: 860px; margin-bottom: 20px; font-size: clamp(3.25rem, 7vw, 6.25rem); line-height: .98; letter-spacing: -.065em; }
+.page-main { 
+   padding-top: var(--header-height); 
+}
+
+.page-hero { 
+   position: relative;
+   padding: 112px 0 78px;
+   border-bottom: 1px solid var(--border);
+   overflow: hidden; 
+}
+
+.page-hero::after { 
+   position: absolute;
+   top: 18%;
+   right: -8%;
+   width: 360px;
+   height: 360px; 
+   border: 1px solid var(--border);
+   border-radius: 50%; 
+   opacity: .35;
+   content: "";
+   box-shadow: 0 0 0 58px rgba(139,92,246,.025), 0 0 0 116px rgba(34,211,238,.018); 
+   pointer-events: none;
+}
+
+.page-hero-grid { 
+   position: relative;
+   z-index: 1;
+   display: grid;
+   grid-template-columns: minmax(0,1fr) auto;
+   align-items: end;
+   gap: 54px;
+}
+
+.page-kicker {
+   display: inline-flex;
+   align-items: center; 
+   gap: 9px; 
+   margin-bottom: 18px; 
+   color: var(--primary); 
+   font-size: .69rem; 
+   font-weight: 900; 
+   letter-spacing: .17em; 
+   text-transform: uppercase; 
+}
+
+.page-kicker::before { 
+   width: 28px; 
+   height: 1px; 
+   background: var(--primary);
+   content: ""; 
+}
+
+.page-hero h1 { 
+   max-width: 860px;
+   margin-bottom: 20px; 
+   font-size: clamp(3.25rem, 7vw, 6.25rem); line-height: .98; letter-spacing: -.065em; }
 .page-hero h1 span { color: var(--primary); }
 .page-hero-copy { max-width: 760px; color: var(--muted); font-size: 1rem; }
 .page-hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 29px; }
