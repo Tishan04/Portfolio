@@ -256,11 +256,34 @@ html[data-theme="light"] .grid-pattern {
 }
 
 .theme-toggle, .menu-toggle { 
-  display: grid; width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 12px; place-items: center; color: var(--text-soft); background: var(--surface); transition: border-color var(--transition), transform var(--transition), background var(--transition); }
-.theme-toggle:hover, .menu-toggle:hover { border-color: var(--border-strong); transform: translateY(-2px); }
-.theme-icon { font-size: 1.05rem; }
-.menu-toggle { display: none; position: relative; }
-.menu-toggle span { position: absolute; width: 18px; height: 1.5px; border-radius: 2px; background: var(--text); transition: transform var(--transition), opacity var(--transition); }
+  display: grid; 
+  width: 40px; 
+  height: 40px; 
+  border: 1px solid var(--border); 
+  border-radius: 12px; 
+  place-items: center; 
+  color: var(--text-soft); 
+  background: var(--surface); 
+  transition: border-color var(--transition), transform var(--transition), background var(--transition); 
+}
+
+.theme-toggle:hover, .menu-toggle:hover { 
+  border-color: var(--border-strong); 
+  transform: translateY(-2px); 
+}
+
+.theme-icon { 
+  font-size: 1.05rem; 
+}
+
+.menu-toggle { 
+  display: none; 
+  position: relative; 
+}
+
+.menu-toggle span { 
+  position: absolute;
+  width: 18px; height: 1.5px; border-radius: 2px; background: var(--text); transition: transform var(--transition), opacity var(--transition); }
 .menu-toggle span:nth-child(1) { transform: translateY(-6px); }
 .menu-toggle span:nth-child(3) { transform: translateY(6px); }
 .menu-toggle.active span:nth-child(1) { transform: rotate(45deg); }
