@@ -283,16 +283,62 @@ html[data-theme="light"] .grid-pattern {
 
 .menu-toggle span { 
   position: absolute;
-  width: 18px; height: 1.5px; border-radius: 2px; background: var(--text); transition: transform var(--transition), opacity var(--transition); }
-.menu-toggle span:nth-child(1) { transform: translateY(-6px); }
-.menu-toggle span:nth-child(3) { transform: translateY(6px); }
-.menu-toggle.active span:nth-child(1) { transform: rotate(45deg); }
-.menu-toggle.active span:nth-child(2) { opacity: 0; }
-.menu-toggle.active span:nth-child(3) { transform: rotate(-45deg); }
+  width: 18px; 
+  height: 1.5px; 
+  border-radius: 2px;
+  background: var(--text); 
+  transition: transform var(--transition), opacity var(--transition); 
+}
 
-.hero { display: flex; min-height: 100svh; padding-top: calc(var(--header-height) + 70px); padding-bottom: 72px; align-items: center; }
-.hero-container { display: grid; grid-template-columns: 1.08fr .92fr; align-items: center; gap: 86px; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; margin-bottom: 23px; padding: 8px 12px; border: 1px solid rgba(52,211,153,.18); border-radius: 999px; color: #9ae6c5; background: rgba(52,211,153,.055); font-size: .72rem; font-weight: 800; }
+.menu-toggle span:nth-child(1) { 
+  transform: translateY(-6px); 
+}
+
+.menu-toggle span:nth-child(3) { 
+  transform: translateY(6px); 
+}
+
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg); 
+}
+
+.menu-toggle.active span:nth-child(2) { 
+  opacity: 0; 
+}
+
+.menu-toggle.active span:nth-child(3) { 
+  transform: rotate(-45deg); 
+}
+
+.hero { 
+  display: flex; 
+  min-height: 100svh; 
+  padding-top: calc(var(--header-height) + 70px);
+  padding-bottom: 72px;
+  align-items: center; 
+}
+
+.hero-container { 
+  display: grid; 
+  grid-template-columns: 1.08fr .92fr; 
+  align-items: center; 
+  gap: 86px; 
+}
+
+.eyebrow { 
+  display: inline-flex; 
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 23px; 
+  padding: 8px 12px; 
+  border: 1px solid rgba(52,211,153,.18); 
+  border-radius: 999px;
+  color: #9ae6c5;
+  background: rgba(52,211,153,.055); 
+  font-size: .72rem;
+  font-weight: 800; 
+}
+
 html[data-theme="light"] .eyebrow { color: #08735a; }
 .status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(52,211,153,.10); animation: pulse 2s infinite; }
 .hero h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(3.1rem, 6.4vw, 5.85rem); line-height: .98; letter-spacing: -.065em; }
