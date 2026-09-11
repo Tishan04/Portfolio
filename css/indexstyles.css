@@ -425,9 +425,43 @@ a.contact-item:hover { border-color: var(--border-strong); background: var(--sur
 
 .footer { padding: 38px 0; border-top: 1px solid var(--border); background: color-mix(in srgb, var(--bg-deep) 78%, transparent); }
 .footer-content { display: grid; grid-template-columns: 1fr auto auto; align-items: center; gap: 42px; }.footer-brand p { margin-top: 5px; color: var(--muted); font-size: .68rem; }.footer-links { display: flex; gap: 20px; }.footer-links a { color: var(--muted); font-size: .68rem; font-weight: 700; transition: color var(--transition); }.footer-links a:hover { color: var(--text); }.copyright { color: var(--muted); font-size: .64rem; text-align: right; }
-.back-to-top { position: fixed; right: 20px; bottom: 20px; z-index: 700; display: grid; width: 44px; height: 44px; border: 1px solid var(--border-strong); border-radius: 13px; place-items: center; opacity: 0; visibility: hidden; color: white; background: rgba(124,58,237,.9); box-shadow: 0 13px 32px rgba(124,58,237,.28); transform: translateY(10px); transition: opacity var(--transition), visibility var(--transition), transform var(--transition); }.back-to-top.visible { opacity: 1; visibility: visible; transform: translateY(0); }
+.back-to-top { 
+  position: fixed; 
+  right: 20px; 
+  bottom: 20px; 
+  z-index: 700; 
+  display: grid; 
+  width: 44px; 
+  height: 44px; 
+  border: 1px solid var(--border-strong); 
+  border-radius: 13px; 
+  place-items: center; 
+  opacity: 0; 
+  visibility: hidden; 
+  color: white; 
+  background: rgba(124,58,237,.9); 
+  box-shadow: 0 13px 32px rgba(124,58,237,.28); 
+  transform: translateY(10px); 
+  transition: opacity var(--transition), visibility var(--transition), transform var(--transition); 
+}
 
-.reveal { opacity: 0; transform: translateY(22px); transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); }.reveal.visible { opacity: 1; transform: none; }
+.back-to-top.visible { 
+  opacity: 1; 
+  visibility: visible; 
+  transform: translateY(0); 
+}
+
+.reveal { 
+  opacity: 0; 
+  transform: translateY(22px); 
+  transition: opacity .7s ease, transform .7s cubic-bezier(.2,.7,.2,1); 
+}
+
+.reveal.visible { 
+  opacity: 1; 
+  transform: none; 
+}
+
 @keyframes pulse { 0%,100% { box-shadow: 0 0 0 5px rgba(52,211,153,.10); } 50% { box-shadow: 0 0 0 9px rgba(52,211,153,0); } }
 @keyframes float { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
 @keyframes scrollLine { 0% { transform: translateX(-100%); } 55%,100% { transform: translateX(100%); } }
