@@ -164,12 +164,12 @@ html[data-theme="light"] .grid-pattern {
 }
 
 .header { 
-  position: fixed; 
-  inset: 0 0 auto; 
-  z-index: 1000; 
-  height: var(--header-height); 
-  border-bottom: 1px solid transparent; 
-  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition); 
+  position: fixed;
+  inset: 0 0 auto;
+  z-index: 1000;
+  height: var(--header-height);
+  border-bottom: 1px solid transparent;
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
 }
 
 .header.scrolled { 
