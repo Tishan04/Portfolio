@@ -141,9 +141,27 @@
 .list-row h4 { margin-bottom: 2px; font-size: .83rem; }
 .list-row p { color: var(--muted); font-size: .72rem; }
 
-.mini-stat-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; margin-top: 26px; }
-.mini-stat { padding: 18px; border: 1px solid var(--border); border-radius: 15px; background: rgba(255,255,255,.018); }
-.mini-stat strong { display: block; margin-bottom: 3px; font-size: 1.45rem; letter-spacing: -.04em; }
+.mini-stat-grid {
+   display: grid;
+   grid-template-columns: repeat(2,1fr);
+   gap: 12px; 
+   margin-top: 26px; 
+}
+
+.mini-stat { 
+   padding: 18px;
+   border: 1px solid var(--border);
+   border-radius: 15px;
+   background: rgba(255,255,255,.018);
+}
+
+.mini-stat strong { 
+   display: block; 
+   margin-bottom: 3px;
+   font-size: 1.45rem;
+   letter-spacing: -.04em;
+   
+}
 .mini-stat span { color: var(--muted); font-size: .66rem; }
 
 /* Skills page */
