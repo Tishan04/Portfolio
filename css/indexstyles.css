@@ -339,12 +339,45 @@ html[data-theme="light"] .grid-pattern {
   font-weight: 800; 
 }
 
-html[data-theme="light"] .eyebrow { color: #08735a; }
-.status-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px rgba(52,211,153,.10); animation: pulse 2s infinite; }
-.hero h1 { max-width: 760px; margin-bottom: 20px; font-size: clamp(3.1rem, 6.4vw, 5.85rem); line-height: .98; letter-spacing: -.065em; }
-.gradient-text { display: block; color: transparent; background: linear-gradient(110deg, #c4b5fd 0%, var(--primary) 46%, var(--secondary) 110%); -webkit-background-clip: text; background-clip: text; }
-html[data-theme="light"] .gradient-text { background: linear-gradient(110deg, #6d28d9, #7c3aed 46%, #0891b2); -webkit-background-clip: text; background-clip: text; }
-.hero-role { margin-bottom: 18px; color: var(--text-soft); font-size: clamp(1rem, 2vw, 1.25rem); }
+html[data-theme="light"] .eyebrow { 
+  color: #08735a; 
+}
+
+.status-dot { 
+  width: 7px; 
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(52,211,153,.10);
+  animation: pulse 2s infinite; 
+}
+
+.hero h1 { 
+  max-width: 760px;
+  margin-bottom: 20px; 
+  font-size: clamp(3.1rem, 6.4vw, 5.85rem); 
+  line-height: .98; letter-spacing: -.065em;
+}
+
+.gradient-text { 
+  display: block;
+  color: transparent;
+  background: linear-gradient(110deg, #c4b5fd 0%, var(--primary) 46%, var(--secondary) 110%);
+  -webkit-background-clip: text;
+  background-clip: text; 
+}
+
+html[data-theme="light"] .gradient-text {
+  background: linear-gradient(110deg, #6d28d9, #7c3aed 46%, #0891b2); 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+}
+
+.hero-role {
+  margin-bottom: 18px;
+  color: var(--text-soft); 
+  font-size: clamp(1rem, 2vw, 1.25rem); 
+}
 .hero-role strong { color: var(--text); }
 #changingRole { display: inline-block; min-width: 165px; color: var(--secondary); font-weight: 750; transition: opacity .2s ease, transform .2s ease; }
 .hero-description { max-width: 680px; color: var(--muted); font-size: 1rem; }
