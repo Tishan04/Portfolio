@@ -378,12 +378,50 @@ html[data-theme="light"] .gradient-text {
   color: var(--text-soft); 
   font-size: clamp(1rem, 2vw, 1.25rem); 
 }
-.hero-role strong { color: var(--text); }
-#changingRole { display: inline-block; min-width: 165px; color: var(--secondary); font-weight: 750; transition: opacity .2s ease, transform .2s ease; }
-.hero-description { max-width: 680px; color: var(--muted); font-size: 1rem; }
-.hero-buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 33px; }
-.button { display: inline-flex; min-height: 51px; padding: 12px 22px; border: 1px solid transparent; border-radius: 13px; align-items: center; justify-content: center; gap: 10px; font-size: .82rem; font-weight: 800; transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition); }
-.button:hover { transform: translateY(-3px); }
+
+.hero-role strong { 
+  color: var(--text);
+}
+
+#changingRole {
+  display: inline-block; 
+  min-width: 165px; 
+  color: var(--secondary); 
+  font-weight: 750; 
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.hero-description { 
+  max-width: 680px; 
+  color: var(--muted);
+  font-size: 1rem; 
+}
+
+.hero-buttons {
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: 12px; 
+  margin-top: 33px; 
+}
+
+.button { 
+  display: inline-flex;
+  min-height: 51px; 
+  padding: 12px 22px; 
+  border: 1px solid transparent;
+  border-radius: 13px; 
+  align-items: center;
+  justify-content: center; 
+  gap: 10px;
+  font-size: .82rem;
+  font-weight: 800;
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition); 
+}
+
+.button:hover { 
+  transform: translateY(-3px);
+}
+
 .primary-button { color: white; background: linear-gradient(135deg, var(--primary-strong), #5b50e8); box-shadow: 0 15px 35px rgba(124,58,237,.24); }
 .primary-button:hover { box-shadow: 0 20px 42px rgba(124,58,237,.34); }
 .secondary-button { border-color: var(--border); color: var(--text-soft); background: var(--surface); }
