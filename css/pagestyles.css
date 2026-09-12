@@ -97,10 +97,29 @@
    border-top: 1px solid var(--border);
 }
 
-.page-section-heading { display: grid; grid-template-columns: minmax(220px,.42fr) minmax(0,1fr); gap: 65px; margin-bottom: 44px; align-items: start; }
-.page-section-heading .section-label { margin-top: 8px; }
-.page-section-heading h2 { max-width: 760px; margin-bottom: 12px; font-size: clamp(2rem, 4.5vw, 3.5rem); line-height: 1.06; letter-spacing: -.05em; }
-.page-section-heading h2 span { color: var(--primary); }
+.page-section-heading { 
+   display: grid;
+   grid-template-columns: minmax(220px,.42fr) minmax(0,1fr);
+   gap: 65px; 
+   margin-bottom: 44px; 
+   align-items: start;
+}
+
+.page-section-heading .section-label {
+   margin-top: 8px;
+}
+
+.page-section-heading h2 {
+   max-width: 760px;
+   margin-bottom: 12px; 
+   font-size: clamp(2rem, 4.5vw, 3.5rem);
+   line-height: 1.06; letter-spacing: -.05em; 
+}
+
+.page-section-heading h2 span { 
+   color: var(--primary);
+}
+
 .page-section-heading p:not(.section-label) { max-width: 690px; color: var(--muted); font-size: .9rem; }
 
 .card-grid { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 20px; }
