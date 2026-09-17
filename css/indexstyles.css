@@ -554,7 +554,17 @@ html[data-theme="light"] .code-purple {
 .code-yellow {
   color: #a16207;
 }
-.floating-badge { position: absolute; display: flex; align-items: center; gap: 9px; padding: 11px 14px; border: 1px solid var(--border); border-radius: 13px; color: var(--text-soft); background: color-mix(in srgb, var(--surface-solid) 90%, transparent); box-shadow: 0 12px 34px rgba(0,0,0,.2); backdrop-filter: blur(12px); font-size: .68rem; font-weight: 800; animation: float 4.5s ease-in-out infinite; }
+.floating-badge {
+  position: absolute; 
+  display: flex; 
+  align-items: center;
+  gap: 9px; 
+  padding: 11px 14px; 
+  border: 1px solid var(--border);
+  border-radius: 13px; 
+  color: var(--text-soft); 
+  background: color-mix(in srgb, var(--surface-solid) 90%, transparent);
+  box-shadow: 0 12px 34px rgba(0,0,0,.2); backdrop-filter: blur(12px); font-size: .68rem; font-weight: 800; animation: float 4.5s ease-in-out infinite; }
 .floating-badge > span { display: grid; width: 27px; height: 27px; border-radius: 8px; place-items: center; color: var(--primary); background: rgba(139,92,246,.12); }
 .badge-one { top: 18%; right: -43px; }.badge-two { bottom: 12%; left: -48px; animation-delay: 1.2s; }
 .scroll-indicator { position: absolute; bottom: 24px; left: 50%; display: flex; align-items: center; gap: 13px; color: var(--muted); font-size: .65rem; font-weight: 700; transform: translateX(-50%); }
